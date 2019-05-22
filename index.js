@@ -23,17 +23,17 @@ var settings = {
         page: {
             title: "Tekos Flow",
             favicon: "/data/assets/tekos_logo.png",
-            css: "./data/assets/tekos.css"
+            css: "/data/assets/tekos.css"
         },
         header: {
             title: " ",
-            image: "./data/assets/logo_chat.png", // or null to remove image
+            image: "/data/assets/logo_chat.png", // or null to remove image
         },
         
         login: {
-            image: "./data/assets/tekos_logo.png" // a 256x256 image
+            image: "/data/assets/tekos_logo.png" // a 256x256 image
         },
-         menu: { 
+        menu: { 
             "menu-item-node-red-version": false,
             "menu-item-user-settings": true,
             "menu-item-keyboard-shortcuts": true,
