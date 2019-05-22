@@ -1,0 +1,12 @@
+{
+  "name": "node-red-project",
+  "description": "Tekos Project",
+  "version": "0.0.1",
+  "dependencies": {
+    "node-red-contrib-filter": "^0.1.3",
+    "node-red-contrib-merge": "^0.1.1",
+    "node-red-contrib-splitter": "0.0.16",
+    "node-red-contrib-tekosbot-v2": "0.0.7",
+    "node-red-node-base64": "^0.1.3"
+  }
+}

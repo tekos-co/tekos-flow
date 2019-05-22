@@ -1,0 +1,210 @@
+[
+  {
+    "id": "ec9c365.b6838c8",
+    "type": "comment",
+    "z": "9f9e1f77.f3731",
+    "name": "Show Form Component",
+    "info": "",
+    "x": 497.5105743408203,
+    "y": 171.02344608306885,
+    "wires": []
+  },
+  {
+    "id": "582c38fb.3a3848",
+    "type": "DS Message send",
+    "z": "9f9e1f77.f3731",
+    "msApp": "cac487df.d3c3b8",
+    "name": "Data",
+    "nextListener": "chat/formId/data",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 675.0104141235352,
+    "y": 256.3847975730896,
+    "wires": []
+  },
+  {
+    "id": "e3a6f930.9904f8",
+    "type": "DS Message receive",
+    "z": "9f9e1f77.f3731",
+    "name": "Data",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/formId/data",
+    "x": 855.8941879272461,
+    "y": 258.5217537879944,
+    "wires": [
+      [
+        "fea17963.250a98"
+      ]
+    ]
+  },
+  {
+    "id": "fea17963.250a98",
+    "type": "debug",
+    "z": "9f9e1f77.f3731",
+    "name": "Recover Data From A Form",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 1087.510398864746,
+    "y": 257.63466119766235,
+    "wires": []
+  },
+  {
+    "id": "fa109c45.99f9a",
+    "type": "form",
+    "z": "9f9e1f77.f3731",
+    "name": "",
+    "title": "Title",
+    "subtitle": "subtitle",
+    "formId": "formIdOnly",
+    "action": "Send",
+    "cancel": "",
+    "options": [
+      {
+        "label": "Text",
+        "value": "value",
+        "type": "text",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "TextArea",
+        "value": "textArea",
+        "type": "textarea",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Tel",
+        "value": "tel",
+        "type": "tel",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "URL",
+        "value": "url",
+        "type": "url",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Number",
+        "value": "number",
+        "type": "number",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Email",
+        "value": "email",
+        "type": "email",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Password",
+        "value": "password",
+        "type": "password",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Checkbox 1",
+        "value": "checkbox1",
+        "type": "checkbox",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Checkbox 2",
+        "value": "checkbox2",
+        "type": "checkbox",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Switch",
+        "value": "switch",
+        "type": "switch",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "List",
+        "value": "list",
+        "type": "list",
+        "list": "list1:List1, list2:List2, list3:List3",
+        "required": false
+      },
+      {
+        "label": "Datetime",
+        "value": "datetime",
+        "type": "datetime",
+        "list": "",
+        "required": false
+      }
+    ],
+    "formValue": {
+      "value": "",
+      "textArea": "",
+      "tel": "",
+      "url": "",
+      "number": "",
+      "email": "",
+      "password": "",
+      "checkbox1": false,
+      "checkbox2": false,
+      "switch": false,
+      "list": "",
+      "datetime": ""
+    },
+    "payload": "",
+    "topic": "",
+    "x": 522.5104064941406,
+    "y": 256.5233836174011,
+    "wires": [
+      [
+        "582c38fb.3a3848"
+      ]
+    ]
+  },
+  {
+    "id": "a82a8581.93c278",
+    "type": "DS Message receive",
+    "z": "9f9e1f77.f3731",
+    "name": "",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/message",
+    "x": 348.5173645019531,
+    "y": 256.9166889190674,
+    "wires": [
+      [
+        "fa109c45.99f9a"
+      ]
+    ]
+  },
+  {
+    "id": "7eb0f875.3a5868",
+    "type": "comment",
+    "z": "9f9e1f77.f3731",
+    "name": "Retrieve Answers",
+    "info": "",
+    "x": 1005.0104141235352,
+    "y": 166.0104341506958,
+    "wires": []
+  },
+  {
+    "id": "cac487df.d3c3b8",
+    "type": "hanna-app",
+    "z": "",
+    "appName": "go",
+    "uri": "edugame",
+    "socket": "chat/message",
+    "image": "https://s3.eu-central-1.amazonaws.com/tekosdata/assets/images/bot_tekos.png",
+    "startMessage": "start",
+    "name": "go"
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "name": "red-app",
+  "version": "0.0.1",
+  "description": "embed node-red",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Abdelhay Najjar",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "moment": "^2.24.0",
+    "mqtt-packet": "^6.1.2",
+    "node-red": "^0.19.5",
+    "node-red-node-email": "^1.0.7",
+    "node-red-node-feedparser": "^0.1.14",
+    "node-red-node-rbe": "^0.2.4",
+    "xml2json": "^0.11.2"
+  }
+}

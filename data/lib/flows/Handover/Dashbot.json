@@ -1,0 +1,458 @@
+[
+  {
+    "id": "917e1c7e.025b2",
+    "type": "http in",
+    "z": "8c97b29e.8872c",
+    "name": "Live Person",
+    "url": "/liveperson",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 318.7629852294922,
+    "y": 646.250165939331,
+    "wires": [
+      [
+        "f8e531e3.12744"
+      ]
+    ]
+  },
+  {
+    "id": "69dec39.fac7e3c",
+    "type": "http in",
+    "z": "8c97b29e.8872c",
+    "name": "Pause",
+    "url": "/pause",
+    "method": "post",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 291.26300048828125,
+    "y": 520.0001282691956,
+    "wires": [
+      [
+        "a27840f0.e86f8"
+      ]
+    ]
+  },
+  {
+    "id": "6c691fe9.d0e8f",
+    "type": "http response",
+    "z": "8c97b29e.8872c",
+    "name": "HTTP",
+    "statusCode": "",
+    "headers": {},
+    "x": 671.2630004882812,
+    "y": 520.0001282691956,
+    "wires": []
+  },
+  {
+    "id": "4cfbd139.7daff",
+    "type": "function",
+    "z": "8c97b29e.8872c",
+    "name": "Text",
+    "func": "msg.payload = {\n    \"type\": \"message\",\n    \"content\" : \"salut\"\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 376.2629928588867,
+    "y": 317.5000762939453,
+    "wires": [
+      [
+        "d1a1fa43.bc4fd8"
+      ]
+    ]
+  },
+  {
+    "id": "d1a1fa43.bc4fd8",
+    "type": "link out",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [
+      "85be6dfc.2dc04",
+      "ff34885c.7f59d8"
+    ],
+    "x": 541.2630004882812,
+    "y": 316.2500629425049,
+    "wires": []
+  },
+  {
+    "id": "9bd0c929.581eb8",
+    "type": "chatbot-quick-replies",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "message": "Choisir une action",
+    "buttons": [
+      {
+        "type": "url",
+        "label": "Tekos",
+        "url": "https://tekos.co"
+      },
+      {
+        "type": "postback",
+        "label": "Talk to human",
+        "value": "talk to human",
+        "alert": false
+      }
+    ],
+    "x": 403.76300048828125,
+    "y": 387.5000801086426,
+    "wires": [
+      [
+        "56bd5a45.3d52a4"
+      ]
+    ]
+  },
+  {
+    "id": "de8c0a26.90f408",
+    "type": "link in",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [
+      "a7b245ee.d1b0a8",
+      "afd07f70.73a1"
+    ],
+    "x": 260.01300525665283,
+    "y": 317.500075340271,
+    "wires": [
+      [
+        "4cfbd139.7daff"
+      ]
+    ]
+  },
+  {
+    "id": "47cfbc0d.86c8a4",
+    "type": "link in",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [
+      "68bd954d.b2fcdc",
+      "bcd7e120.79a0c"
+    ],
+    "x": 258.76300525665283,
+    "y": 387.5000972747803,
+    "wires": [
+      [
+        "9bd0c929.581eb8"
+      ]
+    ]
+  },
+  {
+    "id": "56bd5a45.3d52a4",
+    "type": "link out",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [
+      "85be6dfc.2dc04",
+      "ff34885c.7f59d8"
+    ],
+    "x": 538.7630004882812,
+    "y": 387.5000801086426,
+    "wires": []
+  },
+  {
+    "id": "93ddcf84.0a74d",
+    "type": "DS Message send",
+    "z": "8c97b29e.8872c",
+    "msApp": "cac487df.d3c3b8",
+    "name": "Hanna Out",
+    "nextListener": "",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 1652.5127639770508,
+    "y": 138.7500410079956,
+    "wires": []
+  },
+  {
+    "id": "63b8c645.34d6c8",
+    "type": "Dashbot In",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "dsApp": "91a72507.5759b8",
+    "x": 1468.7628784179688,
+    "y": 138.75002574920654,
+    "wires": [
+      [
+        "93ddcf84.0a74d"
+      ]
+    ]
+  },
+  {
+    "id": "b3cc94eb.bf59d8",
+    "type": "Dashbot Out",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "dsApp": "91a72507.5759b8",
+    "x": 491.2629928588867,
+    "y": 148.75002670288086,
+    "wires": [
+      [
+        "adb99544.1d9728"
+      ]
+    ]
+  },
+  {
+    "id": "ff34885c.7f59d8",
+    "type": "link in",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [
+      "4d8449f7.27d948",
+      "56bd5a45.3d52a4",
+      "d1a1fa43.bc4fd8",
+      "eab2a19e.d6b93",
+      "8d5bc2e5.5edb",
+      "48c03a5c.759214"
+    ],
+    "x": 1351.2626237869263,
+    "y": 137.50003910064697,
+    "wires": [
+      [
+        "63b8c645.34d6c8"
+      ]
+    ]
+  },
+  {
+    "id": "184f3c5d.386194",
+    "type": "switch",
+    "z": "8c97b29e.8872c",
+    "name": "Switch",
+    "property": "payload.text[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "cont",
+        "v": "hi",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "help",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "human",
+        "vt": "str"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 4,
+    "x": 1012.5130004882812,
+    "y": 130.0000123977661,
+    "wires": [
+      [
+        "afd07f70.73a1"
+      ],
+      [
+        "bcd7e120.79a0c"
+      ],
+      [
+        "7e4520d3.094c3"
+      ],
+      [
+        "1a54efe1.0b8e1"
+      ]
+    ]
+  },
+  {
+    "id": "7e4520d3.094c3",
+    "type": "link out",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [],
+    "x": 1147.5128650665283,
+    "y": 153.75004291534424,
+    "wires": []
+  },
+  {
+    "id": "afd07f70.73a1",
+    "type": "link out",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [
+      "de8c0a26.90f408"
+    ],
+    "x": 1148.7630004882812,
+    "y": 68.75002193450928,
+    "wires": []
+  },
+  {
+    "id": "bcd7e120.79a0c",
+    "type": "link out",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [
+      "47cfbc0d.86c8a4"
+    ],
+    "x": 1147.5130004882812,
+    "y": 112.50002384185791,
+    "wires": []
+  },
+  {
+    "id": "1a54efe1.0b8e1",
+    "type": "link out",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [],
+    "x": 1146.2630023956299,
+    "y": 197.50001430511475,
+    "wires": []
+  },
+  {
+    "id": "a27840f0.e86f8",
+    "type": "function",
+    "z": "8c97b29e.8872c",
+    "name": "Paused",
+    "func": "flow.set(\"pause-\"+msg.payload.userId,msg.payload.paused)\nmsg.pause = flow.get(\"pause-\"+msg.payload.userId)\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 521.2630004882812,
+    "y": 520.0001282691956,
+    "wires": [
+      [
+        "6c691fe9.d0e8f"
+      ]
+    ]
+  },
+  {
+    "id": "faafdc71.bdc99",
+    "type": "switch",
+    "z": "8c97b29e.8872c",
+    "name": "Switch",
+    "property": "pause",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "false"
+      },
+      {
+        "t": "true"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 872.5130004882812,
+    "y": 150.0000123977661,
+    "wires": [
+      [
+        "184f3c5d.386194"
+      ],
+      []
+    ]
+  },
+  {
+    "id": "adb99544.1d9728",
+    "type": "function",
+    "z": "8c97b29e.8872c",
+    "name": "Paused ?",
+    "func": "msg.pause = false\nif(flow.get(\"pause-\"+msg.uid)){\n    msg.pause = flow.get(\"pause-\"+msg.uid)\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 695.0130081176758,
+    "y": 148.75002670288086,
+    "wires": [
+      [
+        "faafdc71.bdc99"
+      ]
+    ]
+  },
+  {
+    "id": "f8e531e3.12744",
+    "type": "function",
+    "z": "8c97b29e.8872c",
+    "name": "Get Message",
+    "func": "msg.uid = msg.payload.conversationId\nmsg.payload = {\n    type : \"message\",\n    content : msg.payload.text\n}\ndelete msg.req\ndelete msg.res\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 587.5129928588867,
+    "y": 646.2502040863037,
+    "wires": [
+      [
+        "95735fe8.ced4",
+        "8d5bc2e5.5edb"
+      ]
+    ]
+  },
+  {
+    "id": "95735fe8.ced4",
+    "type": "DS Message send",
+    "z": "8c97b29e.8872c",
+    "msApp": "cac487df.d3c3b8",
+    "name": "Hanna Out",
+    "nextListener": "",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 788.7629852294922,
+    "y": 646.250165939331,
+    "wires": []
+  },
+  {
+    "id": "8d5bc2e5.5edb",
+    "type": "link out",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "links": [
+      "85be6dfc.2dc04",
+      "ff34885c.7f59d8"
+    ],
+    "x": 701.2629699707031,
+    "y": 611.2501983642578,
+    "wires": []
+  },
+  {
+    "id": "f67dfb05.764368",
+    "type": "DS Message receive",
+    "z": "8c97b29e.8872c",
+    "name": "",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/message",
+    "x": 275.64671325683594,
+    "y": 148.65019989013672,
+    "wires": [
+      [
+        "b3cc94eb.bf59d8"
+      ]
+    ]
+  },
+  {
+    "id": "8b2133d9.967e5",
+    "type": "comment",
+    "z": "8c97b29e.8872c",
+    "name": "Mettre le bot en pause",
+    "info": "",
+    "x": 362.71700286865234,
+    "y": 454.5835156440735,
+    "wires": []
+  },
+  {
+    "id": "f18b9ab0.96b4c8",
+    "type": "comment",
+    "z": "8c97b29e.8872c",
+    "name": "Transmettre Le Message D'agent Vers Hanna  ",
+    "info": "",
+    "x": 442.51297760009766,
+    "y": 588.7631530761719,
+    "wires": []
+  },
+  {
+    "id": "cac487df.d3c3b8",
+    "type": "hanna-app",
+    "z": "",
+    "appName": "go",
+    "uri": "edugame",
+    "socket": "chat/message",
+    "image": "https://s3.eu-central-1.amazonaws.com/tekosdata/assets/images/bot_tekos.png",
+    "startMessage": "start",
+    "name": "go"
+  },
+  {
+    "id": "91a72507.5759b8",
+    "type": "dashbot-app",
+    "z": "",
+    "token": "",
+    "name": "api token"
+  }
+]

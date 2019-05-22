@@ -1,0 +1,74 @@
+[
+  {
+    "id": "70d1a70d.faeb78",
+    "type": "watson-text-speech",
+    "z": "754f3c5f.a68164",
+    "name": "Message Hi",
+    "message": [
+      {
+        "message": "Hi"
+      }
+    ],
+    "voice": "en-US_LisaVoice",
+    "apikey": "Api_key",
+    "endpoint": "https://stream-fra.watsonplatform.net/text-to-speech/api",
+    "answer": false,
+    "track": false,
+    "x": 509.50701904296875,
+    "y": 213.71875953674316,
+    "wires": [
+      [
+        "f7372b79.5e06f8"
+      ]
+    ]
+  },
+  {
+    "id": "a5930b83.063148",
+    "type": "DS Message receive",
+    "z": "754f3c5f.a68164",
+    "name": "",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/message",
+    "x": 263.1770935058594,
+    "y": 213.66667366027832,
+    "wires": [
+      [
+        "70d1a70d.faeb78"
+      ]
+    ]
+  },
+  {
+    "id": "f7372b79.5e06f8",
+    "type": "DS Message send",
+    "z": "754f3c5f.a68164",
+    "msApp": "cac487df.d3c3b8",
+    "name": "",
+    "nextListener": "",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 746.184154510498,
+    "y": 213.62851238250732,
+    "wires": []
+  },
+  {
+    "id": "39ed3598.93722a",
+    "type": "comment",
+    "z": "754f3c5f.a68164",
+    "name": "Watson TTS",
+    "info": "",
+    "x": 506.1875762939453,
+    "y": 120.58333969116211,
+    "wires": []
+  },
+  {
+    "id": "cac487df.d3c3b8",
+    "type": "hanna-app",
+    "z": "",
+    "appName": "go",
+    "uri": "edugame",
+    "socket": "chat/message",
+    "image": "https://s3.eu-central-1.amazonaws.com/tekosdata/assets/images/bot_tekos.png",
+    "startMessage": "start",
+    "name": "go"
+  }
+]

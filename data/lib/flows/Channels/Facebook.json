@@ -1,0 +1,299 @@
+[
+  {
+    "id": "d9628e01.d29dc",
+    "type": "chatbot-facebook-receive",
+    "z": "58649c74.283654",
+    "bot": "cdd89cf1.d7985",
+    "botProduction": "cdd89cf1.d7985",
+    "x": 228.01040649414062,
+    "y": 168.01042938232422,
+    "wires": [
+      [
+        "89d036ef.b30d78",
+        "6e24bbc4.3c0634"
+      ]
+    ]
+  },
+  {
+    "id": "89d036ef.b30d78",
+    "type": "switch",
+    "z": "58649c74.283654",
+    "name": "Rooter",
+    "property": "payload.content",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "start",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "image",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 469.0104217529297,
+    "y": 169.01045417785645,
+    "wires": [
+      [
+        "b99b2df6.63ecb"
+      ],
+      [
+        "9402d636.a59e78"
+      ]
+    ]
+  },
+  {
+    "id": "9402d636.a59e78",
+    "type": "link out",
+    "z": "58649c74.283654",
+    "name": "",
+    "links": [],
+    "x": 593.010461807251,
+    "y": 189.01047611236572,
+    "wires": []
+  },
+  {
+    "id": "6aae1eaf.bc14e",
+    "type": "link in",
+    "z": "58649c74.283654",
+    "name": "",
+    "links": [],
+    "x": 306.01041984558105,
+    "y": 472.01044368743896,
+    "wires": [
+      [
+        "8e761bce.2cb9b8",
+        "b9875b21.ea87d8"
+      ]
+    ]
+  },
+  {
+    "id": "112b05f1.0b7e4a",
+    "type": "link out",
+    "z": "58649c74.283654",
+    "name": "",
+    "links": [
+      "b906416a.b33ff"
+    ],
+    "x": 811.0105075836182,
+    "y": 467.0104503631592,
+    "wires": []
+  },
+  {
+    "id": "b906416a.b33ff",
+    "type": "link in",
+    "z": "58649c74.283654",
+    "name": "out",
+    "links": [
+      "112b05f1.0b7e4a",
+      "2b31359f.e2cd8a"
+    ],
+    "x": 949.0104064941406,
+    "y": 163.01042938232422,
+    "wires": [
+      [
+        "69bf9f52.7875e"
+      ]
+    ]
+  },
+  {
+    "id": "a3e310a.baa58f",
+    "type": "tekosbot-image",
+    "z": "58649c74.283654",
+    "name": "Hi pic",
+    "medias": [
+      {
+        "type": "image",
+        "label": "Image",
+        "src": "https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif"
+      }
+    ],
+    "x": 513.0105667114258,
+    "y": 650.0105648040771,
+    "wires": [
+      [
+        "2b31359f.e2cd8a"
+      ]
+    ]
+  },
+  {
+    "id": "6e24bbc4.3c0634",
+    "type": "chatbot-context",
+    "z": "58649c74.283654",
+    "name": "",
+    "variable": "id",
+    "operation": "set",
+    "property": "id",
+    "text": "{{originalMessage.sender.id}}",
+    "x": 398.0104064941406,
+    "y": 249.01042938232422,
+    "wires": [
+      [
+        "2a9db5c.824674a"
+      ]
+    ]
+  },
+  {
+    "id": "2a9db5c.824674a",
+    "type": "debug",
+    "z": "58649c74.283654",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "x": 576.0104064941406,
+    "y": 248.01042938232422,
+    "wires": []
+  },
+  {
+    "id": "bf4a5596.3e4d88",
+    "type": "comment",
+    "z": "58649c74.283654",
+    "name": "------------------------------------ Node Text & Waiting------------------------------------ ",
+    "info": "",
+    "x": 692.0104141235352,
+    "y": 393.0104331970215,
+    "wires": []
+  },
+  {
+    "id": "ed62b8ad.ba0678",
+    "type": "comment",
+    "z": "58649c74.283654",
+    "name": "------------------------------------ Node Image  ------------------------------------ ",
+    "info": "",
+    "x": 650.0104064941406,
+    "y": 589.0104217529297,
+    "wires": []
+  },
+  {
+    "id": "8e761bce.2cb9b8",
+    "type": "tekos-waiting",
+    "z": "58649c74.283654",
+    "waitingType": "typing",
+    "x": 556.5104446411133,
+    "y": 434.0104217529297,
+    "wires": [
+      [
+        "112b05f1.0b7e4a"
+      ]
+    ]
+  },
+  {
+    "id": "b347ac29.708e7",
+    "type": "chatbot-message",
+    "z": "58649c74.283654",
+    "name": "",
+    "message": [
+      {
+        "message": "hi"
+      }
+    ],
+    "x": 649.0103893280029,
+    "y": 519.0104560852051,
+    "wires": [
+      [
+        "112b05f1.0b7e4a"
+      ]
+    ]
+  },
+  {
+    "id": "b9875b21.ea87d8",
+    "type": "delay",
+    "z": "58649c74.283654",
+    "name": "",
+    "pauseType": "delay",
+    "timeout": "2",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 496.51045989990234,
+    "y": 520.0104551315308,
+    "wires": [
+      [
+        "b347ac29.708e7"
+      ]
+    ]
+  },
+  {
+    "id": "69bf9f52.7875e",
+    "type": "chatbot-facebook-send",
+    "z": "58649c74.283654",
+    "bot": "cdd89cf1.d7985",
+    "botProduction": "cdd89cf1.d7985",
+    "track": false,
+    "passThrough": false,
+    "outputs": 0,
+    "x": 1091.0104064941406,
+    "y": 164.01042938232422,
+    "wires": []
+  },
+  {
+    "id": "b99b2df6.63ecb",
+    "type": "link out",
+    "z": "58649c74.283654",
+    "name": "",
+    "links": [],
+    "x": 593.0105152130127,
+    "y": 146.01045989990234,
+    "wires": []
+  },
+  {
+    "id": "16e27cb1.7476d3",
+    "type": "link in",
+    "z": "58649c74.283654",
+    "name": "",
+    "links": [],
+    "x": 317.5138940811157,
+    "y": 649.7500801086426,
+    "wires": [
+      [
+        "a3e310a.baa58f"
+      ]
+    ]
+  },
+  {
+    "id": "2b31359f.e2cd8a",
+    "type": "link out",
+    "z": "58649c74.283654",
+    "name": "",
+    "links": [
+      "b906416a.b33ff"
+    ],
+    "x": 704.0104370117188,
+    "y": 649.0104370117188,
+    "wires": []
+  },
+  {
+    "id": "4a6e7c52.b77f24",
+    "type": "comment",
+    "z": "58649c74.283654",
+    "name": "Node Context",
+    "info": "To keep a variable",
+    "x": 404.52083587646484,
+    "y": 318.71875,
+    "wires": []
+  },
+  {
+    "id": "cdd89cf1.d7985",
+    "type": "chatbot-facebook-node",
+    "z": "",
+    "botname": "botTest",
+    "usernames": "",
+    "store": "",
+    "log": "",
+    "debug": false,
+    "profileFields": "first_name,last_name"
+  }
+]

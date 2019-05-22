@@ -1,0 +1,120 @@
+[
+  {
+    "id": "3afcf4b6.c7dc9c",
+    "type": "DS Message receive",
+    "z": "b076d755.a0ff18",
+    "name": "",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/message",
+    "x": 290.01053619384766,
+    "y": 209.00008010864258,
+    "wires": [
+      [
+        "9ecdcd42.ec1bf"
+      ]
+    ]
+  },
+  {
+    "id": "acb31268.e8fdc",
+    "type": "DS Message send",
+    "z": "b076d755.a0ff18",
+    "msApp": "cac487df.d3c3b8",
+    "name": "",
+    "nextListener": "",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 842.0105628967285,
+    "y": 160.0000820159912,
+    "wires": []
+  },
+  {
+    "id": "90342041.e647d",
+    "type": "debug",
+    "z": "b076d755.a0ff18",
+    "name": "Log",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "true",
+    "x": 690.0105590820312,
+    "y": 253.00008583068848,
+    "wires": []
+  },
+  {
+    "id": "4be15783.6b7f78",
+    "type": "function",
+    "z": "b076d755.a0ff18",
+    "name": "Text",
+    "func": "msg.payload = {\n    type: \"message\",\n    content: msg.payload.result.fulfillment.messages[0].speech\n}\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 684.0105323791504,
+    "y": 159.00014877319336,
+    "wires": [
+      [
+        "acb31268.e8fdc"
+      ]
+    ]
+  },
+  {
+    "id": "9ecdcd42.ec1bf",
+    "type": "tekosbot-dialogflow",
+    "z": "b076d755.a0ff18",
+    "name": "",
+    "tokenv1": "4b612b2c.aab1f4",
+    "session": "uid",
+    "sessionType": "msg",
+    "language": "en",
+    "languageType": "str",
+    "text": "payload.text[0]",
+    "textType": "msg",
+    "intent": "payload",
+    "intentType": "msg",
+    "action": "query",
+    "actionitemaddupd": "entities-single",
+    "actionitemget": "entities-single",
+    "actionitemdel": "entities-single",
+    "selaction": "get",
+    "itemidType": "msg",
+    "objectType": "msg",
+    "version": "v1",
+    "x": 488.2327551841736,
+    "y": 209.0104808807373,
+    "wires": [
+      [
+        "4be15783.6b7f78"
+      ],
+      [
+        "90342041.e647d"
+      ]
+    ]
+  },
+  {
+    "id": "1ed10c90.76f3c3",
+    "type": "comment",
+    "z": "b076d755.a0ff18",
+    "name": "Dialogflow Query",
+    "info": "",
+    "x": 575.5138854980469,
+    "y": 81.64237213134766,
+    "wires": []
+  },
+  {
+    "id": "cac487df.d3c3b8",
+    "type": "hanna-app",
+    "z": "",
+    "appName": "go",
+    "uri": "edugame",
+    "socket": "chat/message",
+    "image": "https://s3.eu-central-1.amazonaws.com/tekosdata/assets/images/bot_tekos.png",
+    "startMessage": "start",
+    "name": "go"
+  },
+  {
+    "id": "4b612b2c.aab1f4",
+    "type": "tekosbot-dialogflow-config",
+    "z": "",
+    "name": ""
+  }
+]

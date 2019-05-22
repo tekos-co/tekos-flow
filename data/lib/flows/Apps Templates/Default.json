@@ -1,0 +1,1417 @@
+[
+  {
+    "id": "f5dfc7a1.434648",
+    "type": "chatbot-context",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "variable": "uid",
+    "operation": "set",
+    "property": "uid",
+    "text": "payload.uid",
+    "x": 565.1772079467773,
+    "y": 149.05554389953613,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "8de93646.64a758",
+    "type": "debug",
+    "z": "9d513f50.d732a",
+    "name": "Log",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 490,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "4f6ae1af.744c5",
+    "type": "DS Message receive",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/message",
+    "x": 409.99999237060547,
+    "y": 262.99999618530273,
+    "wires": [
+      [
+        "d0a8f670.053f18",
+        "8de93646.64a758",
+        "f5dfc7a1.434648"
+      ]
+    ]
+  },
+  {
+    "id": "f54d869d.da5878",
+    "type": "DS Message send",
+    "z": "9d513f50.d732a",
+    "msApp": "cac487df.d3c3b8",
+    "name": "Hanna Out",
+    "nextListener": "chat/message",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 1199.9999923706055,
+    "y": 302.99999618530273,
+    "wires": []
+  },
+  {
+    "id": "4c203adc.38f234",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "d5bf1380.41976",
+      "5a0ba0d2.6ba6c",
+      "4bf50e6e.a6895"
+    ],
+    "x": 354.99999237060547,
+    "y": 562.9999961853027,
+    "wires": [
+      [
+        "4c81ce7f.556"
+      ]
+    ]
+  },
+  {
+    "id": "e4071d21.a9402",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "out",
+    "links": [
+      "11135f50.469541",
+      "c0670a6d.e0c898",
+      "ecbbda37.6fa4d8",
+      "e84ae0d9.ac0b6",
+      "70c03ba5.97ad74",
+      "66a1bf5e.287e2",
+      "84194bed.99f868",
+      "e94a0e84.e10ce",
+      "e26a90be.ef376",
+      "1358a4b4.55414b",
+      "570581b4.557f6",
+      "235b114c.58a18e",
+      "e202c41b.46cf88",
+      "19aa76e2.0fd439",
+      "8544e3c0.2c70a",
+      "2060cc12.5c4a84"
+    ],
+    "x": 1064.9999923706055,
+    "y": 302.99999618530273,
+    "wires": [
+      [
+        "f54d869d.da5878"
+      ]
+    ]
+  },
+  {
+    "id": "70c03ba5.97ad74",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 928.7499866485596,
+    "y": 562.9999833106995,
+    "wires": []
+  },
+  {
+    "id": "d0a8f670.053f18",
+    "type": "switch",
+    "z": "9d513f50.d732a",
+    "name": "Rooter",
+    "property": "payload.text[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "start",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "quickReplies",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "text",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "cards",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "form",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "imagesUpload",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "imageUpload",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "image",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "video",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "context",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "refreshPage",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "disableInput",
+        "vt": "str"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 13,
+    "x": 589.9999923706055,
+    "y": 262.99999618530273,
+    "wires": [
+      [
+        "4bf50e6e.a6895"
+      ],
+      [
+        "1e40a102.ce7aef"
+      ],
+      [
+        "cfcc1510.1080b8"
+      ],
+      [
+        "db3e7181.7b6f6"
+      ],
+      [
+        "5d5dea19.45b674"
+      ],
+      [
+        "ef359fd5.050b3"
+      ],
+      [
+        "41649eba.a6d77"
+      ],
+      [
+        "df684833.fde2f8"
+      ],
+      [
+        "a2cabd36.067c2"
+      ],
+      [
+        "f4d2b74c.170598"
+      ],
+      [
+        "6c137afd.e8a434"
+      ],
+      [
+        "bc2a4f6d.3cbfe"
+      ],
+      [
+        "2765ac42.20c284"
+      ]
+    ]
+  },
+  {
+    "id": "1382d0d9.a2df4f",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "cfcc1510.1080b8"
+    ],
+    "x": 335,
+    "y": 1020,
+    "wires": [
+      [
+        "b345b2ef.e78eb"
+      ]
+    ]
+  },
+  {
+    "id": "cfcc1510.1080b8",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "1382d0d9.a2df4f"
+    ],
+    "x": 815,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "e84ae0d9.ac0b6",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 747.2500104904175,
+    "y": 1022.249988079071,
+    "wires": []
+  },
+  {
+    "id": "4bf50e6e.a6895",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "4c203adc.38f234"
+    ],
+    "x": 815,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "345b159e.8220fa",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Messages sent to users",
+    "info": "",
+    "x": 1159.9999923706055,
+    "y": 242.99999618530273,
+    "wires": []
+  },
+  {
+    "id": "132bf25.ebb1f0e",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Received Messages",
+    "info": "",
+    "x": 327.50001525878906,
+    "y": 214.25001573562622,
+    "wires": []
+  },
+  {
+    "id": "1ddee360.a36d8d",
+    "type": "chatbot-quick-replies",
+    "z": "9d513f50.d732a",
+    "name": "Options",
+    "message": "I'm TekosBot, i'm here to help you. Choose an option ! Refresh the page to reload !",
+    "buttons": [
+      {
+        "type": "postback",
+        "label": "Text",
+        "value": "text",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Cards",
+        "value": "cards",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Form",
+        "value": "form",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Import more image",
+        "value": "upload images",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Import an image",
+        "value": "upload image",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Show image",
+        "value": "show image",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Show video",
+        "value": "show video",
+        "alert": false
+      }
+    ],
+    "x": 776.2500076293945,
+    "y": 561.7499814033508,
+    "wires": [
+      [
+        "70c03ba5.97ad74",
+        "84852762.04aa68"
+      ]
+    ]
+  },
+  {
+    "id": "b345b2ef.e78eb",
+    "type": "chatbot-message",
+    "z": "9d513f50.d732a",
+    "name": "Welcome Back",
+    "message": [
+      {
+        "message": "Here is a text sample message 😊"
+      }
+    ],
+    "x": 507.2500114440918,
+    "y": 1020.999988079071,
+    "wires": [
+      [
+        "e84ae0d9.ac0b6"
+      ]
+    ]
+  },
+  {
+    "id": "c0670a6d.e0c898",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 555,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "4c81ce7f.556",
+    "type": "tekosbot-image",
+    "z": "9d513f50.d732a",
+    "name": "Hi Pic",
+    "medias": [
+      {
+        "type": "image",
+        "label": "",
+        "src": "https://media.giphy.com/media/26xBwdIuRJiAIqHwA/giphy.gif"
+      }
+    ],
+    "x": 469.99999237060547,
+    "y": 562.9999961853027,
+    "wires": [
+      [
+        "c0670a6d.e0c898",
+        "2b061b3c.d11404"
+      ]
+    ]
+  },
+  {
+    "id": "2b061b3c.d11404",
+    "type": "delay",
+    "z": "9d513f50.d732a",
+    "name": "Delay 1s",
+    "pauseType": "delay",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 619.9999923706055,
+    "y": 562.9999961853027,
+    "wires": [
+      [
+        "1ddee360.a36d8d"
+      ]
+    ]
+  },
+  {
+    "id": "c72821eb.b4901",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "db3e7181.7b6f6"
+    ],
+    "x": 335,
+    "y": 1100,
+    "wires": [
+      [
+        "be65df1.55a192"
+      ]
+    ]
+  },
+  {
+    "id": "db3e7181.7b6f6",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "gen",
+    "links": [
+      "c72821eb.b4901"
+    ],
+    "x": 775,
+    "y": 200,
+    "wires": []
+  },
+  {
+    "id": "be65df1.55a192",
+    "type": "chatbot-generic-template",
+    "z": "9d513f50.d732a",
+    "name": "Card 1",
+    "title": "Card 1",
+    "subtitle": "",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvd8Z2_sqVLZ5AdZ_sSqFUKZfT3E33FbJNQToZj4r55_X7eZ7k",
+    "sharable": true,
+    "aspectRatio": "horizontal",
+    "buttons": [
+      {
+        "type": "postback",
+        "label": "Button 1",
+        "value": "Button postback value",
+        "alert": false
+      },
+      {
+        "type": "url",
+        "label": "Button 2",
+        "url": "https://tekos.co"
+      }
+    ],
+    "x": 490,
+    "y": 1100,
+    "wires": [
+      [
+        "c57efa9c.da3538"
+      ]
+    ]
+  },
+  {
+    "id": "c57efa9c.da3538",
+    "type": "chatbot-generic-template",
+    "z": "9d513f50.d732a",
+    "name": "Card 2",
+    "title": "Card ",
+    "subtitle": "Subtitle",
+    "imageUrl": "https://stmed.net/sites/default/files/design-wallpapers-25199-7936814.jpg",
+    "sharable": true,
+    "aspectRatio": "horizontal",
+    "buttons": [
+      {
+        "type": "postback",
+        "label": "Button 1",
+        "value": "Button postback value",
+        "alert": false
+      },
+      {
+        "type": "url",
+        "label": "Button 2",
+        "url": "https://tekos.co"
+      }
+    ],
+    "x": 645.0000152587891,
+    "y": 1100.000033378601,
+    "wires": [
+      [
+        "11135f50.469541"
+      ]
+    ]
+  },
+  {
+    "id": "11135f50.469541",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 751.2499923706055,
+    "y": 1100.0000338554382,
+    "wires": []
+  },
+  {
+    "id": "5d5dea19.45b674",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "form",
+    "links": [
+      "e6718847.45bb38"
+    ],
+    "x": 815,
+    "y": 220,
+    "wires": []
+  },
+  {
+    "id": "e6718847.45bb38",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "5d5dea19.45b674"
+    ],
+    "x": 335,
+    "y": 1200,
+    "wires": [
+      [
+        "c79e15b7.4b6cb8"
+      ]
+    ]
+  },
+  {
+    "id": "2765ac42.20c284",
+    "type": "chatbot-message",
+    "z": "9d513f50.d732a",
+    "name": "Fallback",
+    "message": [
+      {
+        "message": "Ohoo, I'm not trained yet !"
+      },
+      {
+        "message": "This is a sample, you need to customise my flow"
+      }
+    ],
+    "x": 708.250057220459,
+    "y": 417.2499861717224,
+    "wires": [
+      [
+        "66a1bf5e.287e2"
+      ]
+    ]
+  },
+  {
+    "id": "66a1bf5e.287e2",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 820.7501010894775,
+    "y": 417.2499861717224,
+    "wires": []
+  },
+  {
+    "id": "41649eba.a6d77",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "branch",
+    "links": [
+      "4513c014.06485"
+    ],
+    "x": 815,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "ef359fd5.050b3",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "rui",
+    "links": [
+      "1485ce1d.1ad8b2"
+    ],
+    "x": 775,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "77d3de9c.fb30f",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Log",
+    "info": "Use debug node to log the messages recieved by the bot in the main flow",
+    "x": 490,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "2672f0c5.4b68b",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Smileys",
+    "info": "To add an emoji just copy paste from this website: https://getemoji.com/",
+    "x": 1099.9999923706055,
+    "y": 562.9999961853027,
+    "wires": []
+  },
+  {
+    "id": "84852762.04aa68",
+    "type": "Disable Msg Input",
+    "z": "9d513f50.d732a",
+    "name": "Disable Msg Input",
+    "msApp": "cac487df.d3c3b8",
+    "x": 954.9999847412109,
+    "y": 500.4999804496765,
+    "wires": []
+  },
+  {
+    "id": "ce09a93a.b97b18",
+    "type": "Upload Images",
+    "z": "9d513f50.d732a",
+    "name": "Bulk Image Upload",
+    "msApp": "cac487df.d3c3b8",
+    "x": 500,
+    "y": 1300,
+    "wires": [
+      [
+        "1358a4b4.55414b"
+      ]
+    ]
+  },
+  {
+    "id": "daf726e1.150998",
+    "type": "Upload Image",
+    "z": "9d513f50.d732a",
+    "name": "Upload Image",
+    "msApp": "cac487df.d3c3b8",
+    "x": 540,
+    "y": 1400,
+    "wires": [
+      [
+        "570581b4.557f6"
+      ]
+    ]
+  },
+  {
+    "id": "1485ce1d.1ad8b2",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "upload images",
+    "links": [
+      "ef359fd5.050b3"
+    ],
+    "x": 335,
+    "y": 1300,
+    "wires": [
+      [
+        "ce09a93a.b97b18"
+      ]
+    ]
+  },
+  {
+    "id": "1358a4b4.55414b",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 735,
+    "y": 1300,
+    "wires": []
+  },
+  {
+    "id": "570581b4.557f6",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 735,
+    "y": 1400,
+    "wires": []
+  },
+  {
+    "id": "4513c014.06485",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "upload image",
+    "links": [
+      "41649eba.a6d77"
+    ],
+    "x": 335,
+    "y": 1400,
+    "wires": [
+      [
+        "daf726e1.150998"
+      ]
+    ]
+  },
+  {
+    "id": "68c328f9.ee5868",
+    "type": "tekosbot-image",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "medias": [
+      {
+        "type": "image",
+        "label": "Image",
+        "src": "http://viaimage2.viafrance.com/img/img-1000x1000/2/5/2/252247_1000x1000.jpg"
+      }
+    ],
+    "x": 510,
+    "y": 1500,
+    "wires": [
+      [
+        "235b114c.58a18e"
+      ]
+    ]
+  },
+  {
+    "id": "e2e79481.0e65d8",
+    "type": "tekosbot-video",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "medias": [
+      {
+        "type": "video",
+        "label": "Video",
+        "src": "https://www.youtube.com/watch?v=BKde76SUkoo&t=2s"
+      }
+    ],
+    "x": 530,
+    "y": 1600,
+    "wires": [
+      [
+        "e202c41b.46cf88"
+      ]
+    ]
+  },
+  {
+    "id": "e2877adf.f66cf8",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "show image",
+    "links": [
+      "df684833.fde2f8"
+    ],
+    "x": 335,
+    "y": 1500,
+    "wires": [
+      [
+        "68c328f9.ee5868"
+      ]
+    ]
+  },
+  {
+    "id": "2cd4e555.5c782a",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "show video",
+    "links": [
+      "a2cabd36.067c2"
+    ],
+    "x": 335,
+    "y": 1600,
+    "wires": [
+      [
+        "e2e79481.0e65d8"
+      ]
+    ]
+  },
+  {
+    "id": "235b114c.58a18e",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 735,
+    "y": 1500,
+    "wires": []
+  },
+  {
+    "id": "e202c41b.46cf88",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 735,
+    "y": 1600,
+    "wires": []
+  },
+  {
+    "id": "df684833.fde2f8",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e2877adf.f66cf8"
+    ],
+    "x": 775,
+    "y": 280,
+    "wires": []
+  },
+  {
+    "id": "a2cabd36.067c2",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "2cd4e555.5c782a"
+    ],
+    "x": 815,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "d091b708.9195a8",
+    "type": "chatbot-context",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "variable": "uid",
+    "operation": "get",
+    "property": "uid",
+    "text": "payload.uid",
+    "x": 500,
+    "y": 1700,
+    "wires": [
+      [
+        "a2b2594e.201bd8"
+      ]
+    ]
+  },
+  {
+    "id": "4e07c0e8.b0931",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "get uid",
+    "links": [
+      "f4d2b74c.170598"
+    ],
+    "x": 335,
+    "y": 1700,
+    "wires": [
+      [
+        "d091b708.9195a8"
+      ]
+    ]
+  },
+  {
+    "id": "a2b2594e.201bd8",
+    "type": "debug",
+    "z": "9d513f50.d732a",
+    "name": "Log",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 670,
+    "y": 1700,
+    "wires": []
+  },
+  {
+    "id": "f4d2b74c.170598",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "4e07c0e8.b0931"
+    ],
+    "x": 775,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "844ddb5f.e41a08",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Text",
+    "info": "",
+    "x": 278.1207046508789,
+    "y": 979.0833621025085,
+    "wires": []
+  },
+  {
+    "id": "f6785f26.61764",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Card",
+    "info": "",
+    "x": 278.75001525878906,
+    "y": 1064.5129942893982,
+    "wires": []
+  },
+  {
+    "id": "dd7bed4f.8eeef",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Form",
+    "info": "",
+    "x": 282.50001525878906,
+    "y": 1162.0129942893982,
+    "wires": []
+  },
+  {
+    "id": "ca2a0cc2.27ea1",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Import More Image",
+    "info": "",
+    "x": 335.00001525878906,
+    "y": 1255.4852232933044,
+    "wires": []
+  },
+  {
+    "id": "77cf0fa3.0b7da",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Import An Image",
+    "info": "",
+    "x": 323.7500228881836,
+    "y": 1350.4852232933044,
+    "wires": []
+  },
+  {
+    "id": "cde467c0.e151e8",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Show Image",
+    "info": "You can add more images",
+    "x": 302.5000228881836,
+    "y": 1446.179681301117,
+    "wires": []
+  },
+  {
+    "id": "357eacbc.bbe0d4",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Show Video",
+    "info": "You can add more videos",
+    "x": 302.5000228881836,
+    "y": 1546.179681301117,
+    "wires": []
+  },
+  {
+    "id": "46ffb839.e6c518",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Get Context",
+    "info": "",
+    "x": 317.5000228881836,
+    "y": 1646.179681301117,
+    "wires": []
+  },
+  {
+    "id": "f9135447.8e7388",
+    "type": "DS Message send",
+    "z": "9d513f50.d732a",
+    "msApp": "cac487df.d3c3b8",
+    "name": "Data",
+    "nextListener": "chat/formId/data",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 635.0000076293945,
+    "y": 1199.374391078949,
+    "wires": []
+  },
+  {
+    "id": "aa4d27ea.865498",
+    "type": "DS Message receive",
+    "z": "9d513f50.d732a",
+    "name": "Data",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/formId/data",
+    "x": 791.883731842041,
+    "y": 1200.5113406181335,
+    "wires": [
+      [
+        "9079d1b9.fe14"
+      ]
+    ]
+  },
+  {
+    "id": "9079d1b9.fe14",
+    "type": "debug",
+    "z": "9d513f50.d732a",
+    "name": "Recover data from a form",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "x": 1030,
+    "y": 1200,
+    "wires": []
+  },
+  {
+    "id": "c79e15b7.4b6cb8",
+    "type": "form",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "title": "Title",
+    "subtitle": "subtitle",
+    "formId": "formIdOnly",
+    "action": "Send",
+    "cancel": "",
+    "options": [
+      {
+        "label": "Text",
+        "value": "value",
+        "type": "text",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "TextArea",
+        "value": "textArea",
+        "type": "textarea",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Tel",
+        "value": "tel",
+        "type": "tel",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "URL",
+        "value": "url",
+        "type": "url",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Number",
+        "value": "number",
+        "type": "number",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Email",
+        "value": "email",
+        "type": "email",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Password",
+        "value": "password",
+        "type": "password",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Checkbox 1",
+        "value": "checkbox1",
+        "type": "checkbox",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Checkbox 2",
+        "value": "checkbox2",
+        "type": "checkbox",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "Switch",
+        "value": "switch",
+        "type": "switch",
+        "list": "",
+        "required": false
+      },
+      {
+        "label": "List",
+        "value": "list",
+        "type": "list",
+        "list": "list1:List1, list2:List2, list3:List3",
+        "required": false
+      },
+      {
+        "label": "Datetime",
+        "value": "datetime",
+        "type": "datetime",
+        "list": "",
+        "required": false
+      }
+    ],
+    "formValue": {
+      "value": "",
+      "textArea": "",
+      "tel": "",
+      "url": "",
+      "number": "",
+      "email": "",
+      "password": "",
+      "checkbox1": false,
+      "checkbox2": false,
+      "switch": false,
+      "list": "",
+      "datetime": ""
+    },
+    "payload": "",
+    "topic": "",
+    "x": 482.5,
+    "y": 1199.5129771232605,
+    "wires": [
+      [
+        "f9135447.8e7388"
+      ]
+    ]
+  },
+  {
+    "id": "a7229dbc.15d7f",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Disable Message Input",
+    "info": "",
+    "x": 980,
+    "y": 440,
+    "wires": []
+  },
+  {
+    "id": "1e40a102.ce7aef",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "50c9a36.3d48f5c"
+    ],
+    "x": 775,
+    "y": 160,
+    "wires": []
+  },
+  {
+    "id": "50c9a36.3d48f5c",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "1e40a102.ce7aef"
+    ],
+    "x": 675,
+    "y": 520,
+    "wires": [
+      [
+        "1ddee360.a36d8d"
+      ]
+    ]
+  },
+  {
+    "id": "7f8abe01.d8878",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Text with refresh page",
+    "info": "",
+    "x": 380,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "16379ec9.1b9921",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "Refresh",
+    "links": [
+      "6c137afd.e8a434"
+    ],
+    "x": 355,
+    "y": 720,
+    "wires": [
+      [
+        "b92a3bee.0f76e8",
+        "fb4d00c5.0db8d"
+      ]
+    ]
+  },
+  {
+    "id": "b92a3bee.0f76e8",
+    "type": "chatbot-message",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "message": [
+      {
+        "message": "Text with refresh page"
+      }
+    ],
+    "x": 530,
+    "y": 720,
+    "wires": [
+      [
+        "8544e3c0.2c70a"
+      ]
+    ]
+  },
+  {
+    "id": "8544e3c0.2c70a",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 755,
+    "y": 720,
+    "wires": []
+  },
+  {
+    "id": "fb4d00c5.0db8d",
+    "type": "Refresh Page",
+    "z": "9d513f50.d732a",
+    "name": "Refresh Page",
+    "msApp": "cac487df.d3c3b8",
+    "x": 460,
+    "y": 660,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6c137afd.e8a434",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "16379ec9.1b9921"
+    ],
+    "x": 815,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "efc55d93.b47a7",
+    "type": "chatbot-quick-replies",
+    "z": "9d513f50.d732a",
+    "name": "Options",
+    "message": "I'm TekosBot, i'm here to help you. Choose an option ! Refresh the page to reload !",
+    "buttons": [
+      {
+        "type": "postback",
+        "label": "Text",
+        "value": "text",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Cards",
+        "value": "cards",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Form",
+        "value": "form",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Import more image",
+        "value": "upload images",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Import an image",
+        "value": "upload image",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Show image",
+        "value": "show image",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Show video",
+        "value": "show video",
+        "alert": false
+      }
+    ],
+    "x": 520,
+    "y": 900,
+    "wires": [
+      [
+        "2060cc12.5c4a84",
+        "c0b92655.a47bb8"
+      ]
+    ]
+  },
+  {
+    "id": "23e10bb3.a7c574",
+    "type": "link in",
+    "z": "9d513f50.d732a",
+    "name": "Disable",
+    "links": [
+      "bc2a4f6d.3cbfe"
+    ],
+    "x": 335,
+    "y": 900,
+    "wires": [
+      [
+        "efc55d93.b47a7"
+      ]
+    ]
+  },
+  {
+    "id": "2060cc12.5c4a84",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "e4071d21.a9402"
+    ],
+    "x": 755,
+    "y": 900,
+    "wires": []
+  },
+  {
+    "id": "d8ed374b.dbfd28",
+    "type": "comment",
+    "z": "9d513f50.d732a",
+    "name": "Quick Replies With Disable Message Input",
+    "info": "",
+    "x": 440,
+    "y": 800,
+    "wires": []
+  },
+  {
+    "id": "c0b92655.a47bb8",
+    "type": "Disable Msg Input",
+    "z": "9d513f50.d732a",
+    "name": "Disable Msg Input",
+    "msApp": "cac487df.d3c3b8",
+    "x": 700,
+    "y": 840,
+    "wires": []
+  },
+  {
+    "id": "bc2a4f6d.3cbfe",
+    "type": "link out",
+    "z": "9d513f50.d732a",
+    "name": "",
+    "links": [
+      "23e10bb3.a7c574"
+    ],
+    "x": 775,
+    "y": 360,
+    "wires": []
+  },
+  {
+    "id": "cac487df.d3c3b8",
+    "type": "hanna-app",
+    "z": "",
+    "appName": "go",
+    "uri": "edugame",
+    "socket": "chat/message",
+    "image": "https://s3.eu-central-1.amazonaws.com/tekosdata/assets/images/bot_tekos.png",
+    "startMessage": "start",
+    "name": "go"
+  }
+]

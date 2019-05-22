@@ -1,0 +1,176 @@
+body {
+    font-size: 12px;
+    font-family: "CP Mono", "Andale Mono", "Lucida Console", monospace;
+}
+#workspace {
+    left: 230px !important;
+}
+g.innerCanvas rect {
+    /* fill: #FFFFFF; */
+    opacity: 0.6;
+}
+
+#node-input-msApp>option[value="_ADD_"]{
+    display: none;
+}
+
+#chart {
+    background: #FFFFFF;
+}
+
+.node {
+    stroke: #0699de;
+    cursor: move;
+    stroke-width: 2px;
+    border-radius: 0px;
+    /*fill: #FFFFFF !important; */
+    ry: 30px;
+    rx: 15px;
+}
+
+.palette_node {
+    /* background: #FFFFFF !important; */
+    border-radius: 15px;
+    /*border: 1px solid #49423f;*/
+}
+
+.node_button_button{
+    fill: rgb(129, 218, 245);
+}
+#palette {
+    width: 230px;
+}
+
+#header {
+    background: #eee;
+    color: #555;
+}
+
+#btn-deploy.disabled {
+    cursor: default;
+    background: #aaa;
+    color: #666 !important;
+}
+
+
+.deploy-button {
+    background: #ec6500;
+    color: #eee !important;
+}
+
+#btn-deploy+#btn-deploy-options {
+    display:none;
+}
+
+#header .button-group>a{
+    border-radius: 5px;
+}
+
+.deploy-button:hover {
+    background: #ec6500;
+}
+
+#header li.open .button {
+    background: #aaa;
+    border-color: #aaa;
+}
+
+#header ul.dropdown-menu {
+    background: #eee;
+    border-radius: 5px;
+}
+
+#header ul.dropdown-menu li a{
+    color: #555;
+}
+
+
+#header .button {
+    
+    color: #ec6500; 
+    margin: auto 5px;
+    vertical-align: middle;
+    border-left: 2px solid #aaa;
+    border-right: 2px solid #aaa;
+}
+
+#header .button:hover {
+    border-color: #ccc;
+}
+
+#header ul.dropdown-menu li.divider {
+    background: #ccc;
+    border-bottom-color: #ccc;
+}
+
+#header ul.dropdown-menu>li:hover>a, #header ul.dropdown-menu>li:focus>a {
+    background: #ccc !important;
+}
+
+.palette_label {
+    font-size: 10px;
+
+}
+
+.port {
+    stroke: #1056ad;
+    stroke-width: 1;
+    fill: #eee !important;  /*#ec6500 !important;*/
+    cursor: crosshair;
+    transform: rotate(20deg);
+
+}
+
+span.logo {
+    font-size: 100px;
+    line-height: 20px;
+}
+
+span.logo img {
+    height: 40px;
+}
+
+.palette_port {
+    border-radius: 3px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #777574;
+    boder-radius: 50%;
+}
+
+.editor-tray-toolbar button{
+    border-radius: 5px;
+
+}
+
+.editor-tray-toolbar button.primary, .editor-tray-toolbar button.primary:not(.disabled):not(.ui-button-disabled):hover {
+    border-color: #ec6500;
+    background: #ec6500;
+}
+
+
+
+.debug-message-type-string {
+    color: #ec6500;
+}
+
+.node-help {
+    font-size: 12px;
+}
+
+.red-ui-tabs ul li {
+    border-left: 1px solid #b76c03;
+    border-top: 1px solid #965902;
+    background: #f0f0f0;
+    border-radius: 5px 5px 0 0;
+}
+
+
+.link_line {
+    stroke: #09637d;
+}
+
+
+.sidebar-node-info.show-tips .node-info-tips {
+    display: none !important;
+}

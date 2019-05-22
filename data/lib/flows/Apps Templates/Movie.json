@@ -1,0 +1,1035 @@
+[
+  {
+    "id": "1685587e.486268",
+    "type": "DS Message receive",
+    "z": "ec3037a7.76fdb8",
+    "name": "Hanna In",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/message",
+    "x": 160,
+    "y": 120,
+    "wires": [
+      [
+        "14d072cf.ef030d"
+      ]
+    ]
+  },
+  {
+    "id": "16f2259a.bee28a",
+    "type": "DS Message send",
+    "z": "ec3037a7.76fdb8",
+    "msApp": "cac487df.d3c3b8",
+    "name": "Hanna Out",
+    "nextListener": "chat/message",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 1040,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "8ecbfaf2.4de4c8",
+    "type": "link in",
+    "z": "ec3037a7.76fdb8",
+    "name": "start",
+    "links": [
+      "afa283d6.bf68"
+    ],
+    "x": 99.0001106262207,
+    "y": 400.5000591278076,
+    "wires": [
+      [
+        "181924c9.195d1b",
+        "fd1b67b7.e63958"
+      ]
+    ]
+  },
+  {
+    "id": "861977d4.fe8b38",
+    "type": "link in",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "63992d87.264504",
+      "bddb3d7d.afaff",
+      "6e1a10e2.c1034",
+      "81fcec29.d0158",
+      "2e52a1a1.6d393e",
+      "eb94a7aa.959e78",
+      "84194bed.99f868",
+      "e94a0e84.e10ce",
+      "e26a90be.ef376",
+      "fd31abea.4e9e48",
+      "4f1d8d3e.eeeba4",
+      "f8abd42b.a2fc98",
+      "2f1c549f.ab22dc",
+      "33369523.61c57a",
+      "20f30be7.df9ff4",
+      "347d179.fddf4e8",
+      "8d5648a1.988238",
+      "7c26ea42.5a20c4",
+      "bf840ef8.b0e3a",
+      "d04bc739.b548e8",
+      "11618ed2.7a62d1",
+      "bb0f08bd.9e6468",
+      "63ecdb88.9fe484",
+      "60bbe6cc.55cbe8",
+      "9a5c448d.aa28e8",
+      "5b0e729.fa97e8c"
+    ],
+    "x": 905,
+    "y": 140,
+    "wires": [
+      [
+        "16f2259a.bee28a"
+      ]
+    ]
+  },
+  {
+    "id": "2e52a1a1.6d393e",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 977.0001792907715,
+    "y": 399.5001049041748,
+    "wires": []
+  },
+  {
+    "id": "14d072cf.ef030d",
+    "type": "switch",
+    "z": "ec3037a7.76fdb8",
+    "name": "Rooter",
+    "property": "payload.text[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "start",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "latest",
+        "vt": "str"
+      },
+      {
+        "t": "cont",
+        "v": "similar",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "search",
+        "vt": "str"
+      },
+      {
+        "t": "else"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 5,
+    "x": 330,
+    "y": 120,
+    "wires": [
+      [
+        "afa283d6.bf68"
+      ],
+      [
+        "fe10250d.6c7b18"
+      ],
+      [
+        "1b6c6415.759b9c"
+      ],
+      [
+        "dc53c36a.c8658"
+      ],
+      [
+        "dfc62cd4.0eabc"
+      ]
+    ]
+  },
+  {
+    "id": "6a0358f6.2efad8",
+    "type": "link in",
+    "z": "ec3037a7.76fdb8",
+    "name": "latest",
+    "links": [
+      "fe10250d.6c7b18"
+    ],
+    "x": 98.25005912780762,
+    "y": 543.2500743865967,
+    "wires": [
+      [
+        "291e336d.462e1c"
+      ]
+    ]
+  },
+  {
+    "id": "fe10250d.6c7b18",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "latest",
+    "links": [
+      "6a0358f6.2efad8"
+    ],
+    "x": 619.9999961853027,
+    "y": 85,
+    "wires": []
+  },
+  {
+    "id": "81fcec29.d0158",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 380.0000648498535,
+    "y": 502.50003242492676,
+    "wires": []
+  },
+  {
+    "id": "afa283d6.bf68",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "start",
+    "links": [
+      "8ecbfaf2.4de4c8"
+    ],
+    "x": 621.9999961853027,
+    "y": 45,
+    "wires": []
+  },
+  {
+    "id": "fc9c65a9.9e5648",
+    "type": "comment",
+    "z": "ec3037a7.76fdb8",
+    "name": "Messages Sent To Users",
+    "info": "",
+    "x": 1000,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "38f4a1e2.e7b6fe",
+    "type": "comment",
+    "z": "ec3037a7.76fdb8",
+    "name": "Received Messages",
+    "info": "",
+    "x": 170,
+    "y": 60,
+    "wires": []
+  },
+  {
+    "id": "98fe385.fd419c8",
+    "type": "chatbot-quick-replies",
+    "z": "ec3037a7.76fdb8",
+    "name": "Options",
+    "message": "I'm the MovieBot. You can ask me whatever you want about movies 🙂 . Here are some options",
+    "buttons": [
+      {
+        "type": "postback",
+        "label": "Lastest Movies",
+        "value": "latest",
+        "alert": false
+      },
+      {
+        "type": "postback",
+        "label": "Search for a movie",
+        "value": "search",
+        "alert": false
+      }
+    ],
+    "x": 864.0001106262207,
+    "y": 400.5000591278076,
+    "wires": [
+      [
+        "2e52a1a1.6d393e"
+      ]
+    ]
+  },
+  {
+    "id": "291e336d.462e1c",
+    "type": "chatbot-message",
+    "z": "ec3037a7.76fdb8",
+    "name": "Lastest Movies",
+    "message": [
+      {
+        "message": "Here are the lastest movies 😊"
+      }
+    ],
+    "x": 257.0000820159912,
+    "y": 543.2500743865967,
+    "wires": [
+      [
+        "81fcec29.d0158",
+        "140247a1.56f068"
+      ]
+    ]
+  },
+  {
+    "id": "cb688026.fc0b5",
+    "type": "delay",
+    "z": "ec3037a7.76fdb8",
+    "name": "Delay 1s",
+    "pauseType": "delay",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 714.0001106262207,
+    "y": 400.5000591278076,
+    "wires": [
+      [
+        "98fe385.fd419c8"
+      ]
+    ]
+  },
+  {
+    "id": "63992d87.264504",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 1647.5001907348633,
+    "y": 542.5001811981201,
+    "wires": []
+  },
+  {
+    "id": "140247a1.56f068",
+    "type": "http request",
+    "z": "ec3037a7.76fdb8",
+    "name": "The Movie DB",
+    "method": "GET",
+    "ret": "obj",
+    "url": "https://api.themoviedb.org/3/movie/upcoming?api_key=e056ad6e7bd5444e2989d545d37a7003&language=en-US&page=1",
+    "tls": "",
+    "x": 483.2500648498535,
+    "y": 543.2500743865967,
+    "wires": [
+      [
+        "80baf46b.e70e68"
+      ]
+    ]
+  },
+  {
+    "id": "914762e1.6ad13",
+    "type": "function",
+    "z": "ec3037a7.76fdb8",
+    "name": "List Of Lastest Movies",
+    "func": "var elementsY=[];\nfor (var i = 0; i < 10; i++) {\n    \n       let movie = msg.payload[i];\n       if(movie.payload.homepage != null){\n       elementsY.push( {\n                                  \"title\": movie.payload.title,\n                                  \"subtitle\": movie.payload.overview,\n                                  \"imageUrl\": \"http://image.tmdb.org/t/p/w185//\" + movie.payload.backdrop_path,\n                                  \"buttons\": [\n                                {\n                                  \"type\": 'url',\n                                  \"url\": movie.payload.homepage,\n                                  \"label\": 'Movie Webpage'\n                                },\n                                {\n                                  \"type\": 'postback',\n                                  \"value\": \"similar\"+movie.payload.id,\n                                  \"label\": 'Similar Movies'\n                                }\n                                \n                              ]\n                          })\n    }}\n\nmsg.uid=   msg.payload[0].uid\n//msg.payload.numresults = msg.payload.numresults - msg.payload.offset;\nmsg.payload = {\n                \"type\": \"generic-template\",\n                \"aspectRatio\": 'horizontal',\n                \"elements\": elementsY,\n                \"chatId\": \"1771695592863159\",\n                \"messageId\":null,\n                \"inbound\":false,\n                \"options\":{},\n\n};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 1463.5002479553223,
+    "y": 542.5002918243408,
+    "wires": [
+      [
+        "63992d87.264504"
+      ]
+    ]
+  },
+  {
+    "id": "9c7fe033.28d5e",
+    "type": "comment",
+    "z": "ec3037a7.76fdb8",
+    "name": "Get similar movies",
+    "info": "https://developers.themoviedb.org/3",
+    "x": 195.0000228881836,
+    "y": 841.2501287460327,
+    "wires": []
+  },
+  {
+    "id": "c1e84095.de6ac",
+    "type": "http request",
+    "z": "ec3037a7.76fdb8",
+    "name": "Get Similar Movies",
+    "method": "GET",
+    "ret": "obj",
+    "url": "https://api.themoviedb.org/3/movie/{{id}}/similar?api_key=e056ad6e7bd5444e2989d545d37a7003&language=en-US&page=1",
+    "tls": "",
+    "x": 483.7500114440918,
+    "y": 941.250165939331,
+    "wires": [
+      [
+        "23b09e4c.a49112"
+      ]
+    ]
+  },
+  {
+    "id": "1b6c6415.759b9c",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "similar",
+    "links": [
+      "29a692a4.aa71ee"
+    ],
+    "x": 618.000039100647,
+    "y": 129.25000190734863,
+    "wires": []
+  },
+  {
+    "id": "29a692a4.aa71ee",
+    "type": "link in",
+    "z": "ec3037a7.76fdb8",
+    "name": "similar",
+    "links": [
+      "1b6c6415.759b9c"
+    ],
+    "x": 100.0000228881836,
+    "y": 941.2501287460327,
+    "wires": [
+      [
+        "316a4e07.4a62b2",
+        "ee73e9b7.7f0b18"
+      ]
+    ]
+  },
+  {
+    "id": "cff1d884.041fc8",
+    "type": "comment",
+    "z": "ec3037a7.76fdb8",
+    "name": "Search Movie",
+    "info": "https://developers.themoviedb.org/3",
+    "x": 162.97228813171387,
+    "y": 623.2501773834229,
+    "wires": []
+  },
+  {
+    "id": "df872e50.4",
+    "type": "http request",
+    "z": "ec3037a7.76fdb8",
+    "name": "Get Movies",
+    "method": "GET",
+    "ret": "obj",
+    "url": "https://api.themoviedb.org/3/search/movie?api_key=e056ad6e7bd5444e2989d545d37a7003&language=en-US&query={{payload.text}}&page=1&include_adult=false",
+    "tls": "",
+    "x": 612.9722766876221,
+    "y": 751.7501373291016,
+    "wires": [
+      [
+        "f06454ec.20ee58"
+      ]
+    ]
+  },
+  {
+    "id": "3e70a21c.d0275e",
+    "type": "link in",
+    "z": "ec3037a7.76fdb8",
+    "name": "search",
+    "links": [
+      "dc53c36a.c8658"
+    ],
+    "x": 97.97227668762207,
+    "y": 685.7501373291016,
+    "wires": [
+      [
+        "87eaddb6.5daa4"
+      ]
+    ]
+  },
+  {
+    "id": "dc53c36a.c8658",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "search",
+    "links": [
+      "3e70a21c.d0275e"
+    ],
+    "x": 617.5000247955322,
+    "y": 173.75000762939453,
+    "wires": []
+  },
+  {
+    "id": "87eaddb6.5daa4",
+    "type": "chatbot-message",
+    "z": "ec3037a7.76fdb8",
+    "name": "Keywrod",
+    "message": [
+      {
+        "message": "please type a keyword"
+      }
+    ],
+    "x": 232.97227668762207,
+    "y": 685.7501373291016,
+    "wires": [
+      [
+        "85827443.e660b8"
+      ]
+    ]
+  },
+  {
+    "id": "85827443.e660b8",
+    "type": "DS Message send",
+    "z": "ec3037a7.76fdb8",
+    "msApp": "cac487df.d3c3b8",
+    "name": "Chat/search",
+    "nextListener": "chat/search",
+    "nextUri": "",
+    "nextAppName": "",
+    "x": 422.97227668762207,
+    "y": 685.7501373291016,
+    "wires": []
+  },
+  {
+    "id": "fa2c700c.5acb6",
+    "type": "DS Message receive",
+    "z": "ec3037a7.76fdb8",
+    "name": "Chat/search",
+    "msApp": "cac487df.d3c3b8",
+    "method": "chat/search",
+    "x": 430.9757328033447,
+    "y": 751.6200046539307,
+    "wires": [
+      [
+        "df872e50.4"
+      ]
+    ]
+  },
+  {
+    "id": "181924c9.195d1b",
+    "type": "delay",
+    "z": "ec3037a7.76fdb8",
+    "name": "Delay 1s",
+    "pauseType": "delay",
+    "timeout": "1",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 254.0001106262207,
+    "y": 400.5000591278076,
+    "wires": [
+      [
+        "d86be581.221058"
+      ]
+    ]
+  },
+  {
+    "id": "1ce1cd13.8cbcf3",
+    "type": "comment",
+    "z": "ec3037a7.76fdb8",
+    "name": "Get the Movie details",
+    "info": "",
+    "x": 978.9999542236328,
+    "y": 473.000093460083,
+    "wires": []
+  },
+  {
+    "id": "25a1357c.0aef5a",
+    "type": "split",
+    "z": "ec3037a7.76fdb8",
+    "name": "Split",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 886.2501029968262,
+    "y": 542.5000882148743,
+    "wires": [
+      [
+        "c8e63138.a205b"
+      ]
+    ]
+  },
+  {
+    "id": "80baf46b.e70e68",
+    "type": "function",
+    "z": "ec3037a7.76fdb8",
+    "name": "Keep The Result",
+    "func": "msg.payload = msg.payload.results\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 705.0000648498535,
+    "y": 542.5000324249268,
+    "wires": [
+      [
+        "25a1357c.0aef5a"
+      ]
+    ]
+  },
+  {
+    "id": "c8e63138.a205b",
+    "type": "http request",
+    "z": "ec3037a7.76fdb8",
+    "name": "Get Movie Details",
+    "method": "GET",
+    "ret": "obj",
+    "url": "https://api.themoviedb.org/3/movie/{{payload.id}}?api_key=e056ad6e7bd5444e2989d545d37a7003&language=en-US",
+    "tls": "",
+    "x": 1082.499927520752,
+    "y": 542.5001201629639,
+    "wires": [
+      [
+        "fe9d0768.6799d8"
+      ]
+    ]
+  },
+  {
+    "id": "fe9d0768.6799d8",
+    "type": "merge",
+    "z": "ec3037a7.76fdb8",
+    "name": "",
+    "timeout": "3",
+    "x": 1252.499927520752,
+    "y": 542.5001201629639,
+    "wires": [
+      [
+        "914762e1.6ad13"
+      ]
+    ]
+  },
+  {
+    "id": "316a4e07.4a62b2",
+    "type": "function",
+    "z": "ec3037a7.76fdb8",
+    "name": "Function Replace",
+    "func": "msg.id=msg.payload.text[0].replace(\"similar\", \"\")\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 255.00002670288086,
+    "y": 941.250165939331,
+    "wires": [
+      [
+        "c1e84095.de6ac"
+      ]
+    ]
+  },
+  {
+    "id": "23b09e4c.a49112",
+    "type": "switch",
+    "z": "ec3037a7.76fdb8",
+    "name": "Switch",
+    "property": "payload.results.length",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "neq",
+        "v": "0",
+        "vt": "str"
+      },
+      {
+        "t": "eq",
+        "v": "0",
+        "vt": "str"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 2,
+    "x": 665.0000228881836,
+    "y": 941.2501287460327,
+    "wires": [
+      [
+        "c8ff0e8e.1d74d"
+      ],
+      [
+        "e8c6bcae.6a581"
+      ]
+    ]
+  },
+  {
+    "id": "e8c6bcae.6a581",
+    "type": "chatbot-message",
+    "z": "ec3037a7.76fdb8",
+    "name": "",
+    "message": [
+      {
+        "message": "no similar movies"
+      }
+    ],
+    "x": 813.7500381469727,
+    "y": 980.000114440918,
+    "wires": [
+      [
+        "347d179.fddf4e8"
+      ]
+    ]
+  },
+  {
+    "id": "347d179.fddf4e8",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 926.2500457763672,
+    "y": 980.000114440918,
+    "wires": []
+  },
+  {
+    "id": "c8ff0e8e.1d74d",
+    "type": "function",
+    "z": "ec3037a7.76fdb8",
+    "name": "Keep The Result",
+    "func": "msg.payload = msg.payload.results\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 856.0000610351562,
+    "y": 885.2504844665527,
+    "wires": [
+      [
+        "48387909.407c98"
+      ]
+    ]
+  },
+  {
+    "id": "48387909.407c98",
+    "type": "split",
+    "z": "ec3037a7.76fdb8",
+    "name": "Split",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 1021.5000953674316,
+    "y": 885.2503032684326,
+    "wires": [
+      [
+        "cde78898.07add8"
+      ]
+    ]
+  },
+  {
+    "id": "cde78898.07add8",
+    "type": "http request",
+    "z": "ec3037a7.76fdb8",
+    "name": "Get Movie Details",
+    "method": "GET",
+    "ret": "obj",
+    "url": "https://api.themoviedb.org/3/movie/{{payload.id}}?api_key=e056ad6e7bd5444e2989d545d37a7003&language=en-US",
+    "tls": "",
+    "x": 1201.5000305175781,
+    "y": 885.2503128051758,
+    "wires": [
+      [
+        "8852c3ff.07998"
+      ]
+    ]
+  },
+  {
+    "id": "8852c3ff.07998",
+    "type": "merge",
+    "z": "ec3037a7.76fdb8",
+    "name": "",
+    "timeout": "3",
+    "x": 1388.249927520752,
+    "y": 885.5003910064697,
+    "wires": [
+      [
+        "66268ca1.04d844"
+      ]
+    ]
+  },
+  {
+    "id": "66268ca1.04d844",
+    "type": "function",
+    "z": "ec3037a7.76fdb8",
+    "name": "List Of Similar Movies",
+    "func": "var elementsY=[];\nfor (var i = 0; i < 10; i++) {\n    \n       let movie = msg.payload[i];\n       if(movie.payload.homepage != null){\n       elementsY.push( {\n                                  \"title\": movie.payload.title,\n                                  \"subtitle\": movie.payload.overview,\n                                  \"imageUrl\": \"http://image.tmdb.org/t/p/w185//\" + movie.payload.backdrop_path,\n                                  \"buttons\": [\n                                {\n                                  \"type\": 'url',\n                                  \"url\": movie.payload.homepage,\n                                  \"label\": 'Movie Webpage'\n                                }\n                                \n                              ]\n                          })\n    }}\n\nmsg.uid=   msg.payload[0].uid\n//msg.payload.numresults = msg.payload.numresults - msg.payload.offset;\nmsg.payload = {\n                \"type\": \"generic-template\",\n                \"sharable\": true,\n                \"aspectRatio\": 'horizontal',\n                \"elements\": elementsY,\n                \"chatId\": \"1771695592863159\",\n                \"messageId\":null,\n                \"inbound\":false,\n                \"options\":{},\n\n};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 1599.4999389648438,
+    "y": 886.7503910064697,
+    "wires": [
+      [
+        "8d5648a1.988238"
+      ]
+    ]
+  },
+  {
+    "id": "8d5648a1.988238",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 1768.2500247955322,
+    "y": 885.5002431869507,
+    "wires": []
+  },
+  {
+    "id": "d621e95a.1d4d28",
+    "type": "tekosbot-image",
+    "z": "ec3037a7.76fdb8",
+    "name": "Hi Pic",
+    "medias": [
+      {
+        "type": "image",
+        "label": "",
+        "src": "https://media.giphy.com/media/2n0jau6NX9SGQ/giphy.gif"
+      }
+    ],
+    "x": 544.0001106262207,
+    "y": 400.5000591278076,
+    "wires": [
+      [
+        "cb688026.fc0b5",
+        "7c26ea42.5a20c4"
+      ]
+    ]
+  },
+  {
+    "id": "f06454ec.20ee58",
+    "type": "function",
+    "z": "ec3037a7.76fdb8",
+    "name": "Keep The Result",
+    "func": "msg.payload = msg.payload.results\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 806.2222843170166,
+    "y": 751.7502183914185,
+    "wires": [
+      [
+        "2b96d212.aa202e"
+      ]
+    ]
+  },
+  {
+    "id": "2b96d212.aa202e",
+    "type": "split",
+    "z": "ec3037a7.76fdb8",
+    "name": "Split",
+    "splt": "\\n",
+    "spltType": "str",
+    "arraySplt": 1,
+    "arraySpltType": "len",
+    "stream": false,
+    "addname": "",
+    "x": 989.7223224639893,
+    "y": 751.7502193450928,
+    "wires": [
+      [
+        "416b7da7.2fe8f4"
+      ]
+    ]
+  },
+  {
+    "id": "416b7da7.2fe8f4",
+    "type": "http request",
+    "z": "ec3037a7.76fdb8",
+    "name": "Get Movie Details",
+    "method": "GET",
+    "ret": "obj",
+    "url": "https://api.themoviedb.org/3/movie/{{payload.id}}?api_key=e056ad6e7bd5444e2989d545d37a7003&language=en-US",
+    "tls": "",
+    "x": 1181.7223281860352,
+    "y": 751.7502193450928,
+    "wires": [
+      [
+        "1bdcfe3.f8d1b02"
+      ]
+    ]
+  },
+  {
+    "id": "1bdcfe3.f8d1b02",
+    "type": "merge",
+    "z": "ec3037a7.76fdb8",
+    "name": "",
+    "timeout": "8",
+    "x": 1383.722339630127,
+    "y": 751.7501792907715,
+    "wires": [
+      [
+        "434ce312.ffa40c"
+      ]
+    ]
+  },
+  {
+    "id": "434ce312.ffa40c",
+    "type": "function",
+    "z": "ec3037a7.76fdb8",
+    "name": "List Of Films Search",
+    "func": "var elementsY=[];\nfor (var i = 0; i < 10; i++) {\n    \n       let movie = msg.payload[i];\n       if(movie.payload.homepage != null){\n       elementsY.push( {\n                                  \"title\": movie.payload.title,\n                                  \"subtitle\": movie.payload.overview,\n                                  \"imageUrl\": \"http://image.tmdb.org/t/p/w185//\" + movie.payload.backdrop_path,\n                                  \"buttons\": [\n                                {\n                                  \"type\": 'url',\n                                  \"url\": movie.payload.homepage,\n                                  \"label\": 'Movie Webpage'\n                                }\n                                \n                              ]\n                          })\n    }}\n\nmsg.uid=   msg.payload[0].uid\n//msg.payload.numresults = msg.payload.numresults - msg.payload.offset;\nmsg.payload = {\n                \"type\": \"generic-template\",\n                \"sharable\": true,\n                \"aspectRatio\": 'horizontal',\n                \"elements\": elementsY,\n                \"chatId\": \"1771695592863159\",\n                \"messageId\":null,\n                \"inbound\":false,\n                \"options\":{},\n\n};\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 1597.7223205566406,
+    "y": 750.7502193450928,
+    "wires": [
+      [
+        "bf840ef8.b0e3a"
+      ]
+    ]
+  },
+  {
+    "id": "bf840ef8.b0e3a",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 1764.722360610962,
+    "y": 750.7502193450928,
+    "wires": []
+  },
+  {
+    "id": "7c26ea42.5a20c4",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 627.7501316070557,
+    "y": 355.50006103515625,
+    "wires": []
+  },
+  {
+    "id": "d86be581.221058",
+    "type": "chatbot-message",
+    "z": "ec3037a7.76fdb8",
+    "name": "",
+    "message": [
+      {
+        "message": "Hey 🥰 "
+      }
+    ],
+    "x": 414.0001106262207,
+    "y": 400.5000591278076,
+    "wires": [
+      [
+        "d621e95a.1d4d28"
+      ]
+    ]
+  },
+  {
+    "id": "fd1b67b7.e63958",
+    "type": "Refresh Page",
+    "z": "ec3037a7.76fdb8",
+    "name": "Refresh Page",
+    "msApp": "cac487df.d3c3b8",
+    "x": 233.5070915222168,
+    "y": 339.8959255218506,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "c7789bbc.66fe58",
+    "type": "chatbot-message",
+    "z": "ec3037a7.76fdb8",
+    "name": "",
+    "message": [
+      {
+        "message": "Here are the similar movies 😊"
+      }
+    ],
+    "x": 414.513916015625,
+    "y": 893.6633596420288,
+    "wires": [
+      [
+        "9a5c448d.aa28e8"
+      ]
+    ]
+  },
+  {
+    "id": "9a5c448d.aa28e8",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 515.0104446411133,
+    "y": 893.593861579895,
+    "wires": []
+  },
+  {
+    "id": "ee73e9b7.7f0b18",
+    "type": "delay",
+    "z": "ec3037a7.76fdb8",
+    "name": "Delay 2s",
+    "pauseType": "delay",
+    "timeout": "2",
+    "timeoutUnits": "seconds",
+    "rate": "1",
+    "nbRateUnits": "1",
+    "rateUnits": "second",
+    "randomFirst": "1",
+    "randomLast": "5",
+    "randomUnits": "seconds",
+    "drop": false,
+    "x": 243.51390838623047,
+    "y": 892.3960237503052,
+    "wires": [
+      [
+        "c7789bbc.66fe58"
+      ]
+    ]
+  },
+  {
+    "id": "fcc91ab3.e66498",
+    "type": "comment",
+    "z": "ec3037a7.76fdb8",
+    "name": "Get The Lastest Movies",
+    "info": "",
+    "x": 197.01047134399414,
+    "y": 474.06604862213135,
+    "wires": []
+  },
+  {
+    "id": "dfc62cd4.0eabc",
+    "type": "chatbot-message",
+    "z": "ec3037a7.76fdb8",
+    "name": "Fallback",
+    "message": [
+      {
+        "message": "Ohoo, I'm not trained yet !"
+      },
+      {
+        "message": "This is a sample, you need to customise my flow"
+      }
+    ],
+    "x": 487.51300048828125,
+    "y": 225.01301383972168,
+    "wires": [
+      [
+        "5b0e729.fa97e8c"
+      ]
+    ]
+  },
+  {
+    "id": "5b0e729.fa97e8c",
+    "type": "link out",
+    "z": "ec3037a7.76fdb8",
+    "name": "out",
+    "links": [
+      "861977d4.fe8b38"
+    ],
+    "x": 616.2629776000977,
+    "y": 225.01301383972168,
+    "wires": []
+  },
+  {
+    "id": "cac487df.d3c3b8",
+    "type": "hanna-app",
+    "z": "",
+    "appName": "go",
+    "uri": "edugame",
+    "socket": "chat/message",
+    "image": "https://s3.eu-central-1.amazonaws.com/tekosdata/assets/images/bot_tekos.png",
+    "startMessage": "start",
+    "name": "go"
+  }
+]
