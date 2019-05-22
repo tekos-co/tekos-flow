@@ -5,12 +5,12 @@
   "logo": "https://tekos.co/wp-content/uploads/2018/04/tekos-1-4-1024x768.png",
   "keywords": ["tekos"],
   "env": {
-    "RED_USERNAME": {
-      "description": "red owner username",
+    "FLOW_LOGIN": {
+      "description": "flow owner username",
       "value": ""
     },
-    "RED_PASSWORD": {
-      "description": "red owner password",
+    "FLOW_PASSWORD": {
+      "description": "flow owner password",
       "value": ""
     }
   }

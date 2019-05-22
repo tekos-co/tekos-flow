@@ -57,13 +57,13 @@ var settings = {
 
 // settings.adminAuth = require('./user-auth')();
 
-if(process.env.RED_USERNAME){
+if(process.env.FLOW_LOGIN){
 
         settings.adminAuth= {
             type: "credentials",
             users: [{
-                    username: process.env.RED_USERNAME,
-                    password: require('bcryptjs').hashSync(process.env.RED_PASSWORD, 8),
+                    username: process.env.FLOW_LOGIN,
+                    password: require('bcryptjs').hashSync(process.env.FLOW_PASSWORD, 8),
                     permissions: "*"
                 }/*,
                 {
