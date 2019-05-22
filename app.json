@@ -1,7 +1,7 @@
 {
   "name": "Node Red App",
   "description": "node-red embedding",
-  "repository": "https://github.com/zeineb89/node-red-embed",
+  "repository": "https://github.com/tekos-co/tekos-flow",
   "logo": "https://tekos.co/wp-content/uploads/2018/04/tekos-1-4-1024x768.png",
   "keywords": ["tekos"],
   "env": {
