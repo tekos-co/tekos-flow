@@ -1,6 +1,17 @@
 {
-  "name": "Node.js Sample",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/tekos-co/tekos-flow",
-  "logo": "https://node-js-sample.herokuapp.com/node.png"
+  "name": "Node Red App",
+  "description": "node-red embedding",
+  "repository": "https://github.com/zeineb89/node-red-embed",
+  "logo": "https://tekos.co/wp-content/uploads/2018/04/tekos-1-4-1024x768.png",
+  "keywords": ["tekos"],
+  "env": {
+    "FLOW_LOGIN": {
+      "description": "flow owner username",
+      "value": ""
+    },
+    "FLOW_PASSWORD": {
+      "description": "flow owner password",
+      "value": ""
+    }
+  }
 }
