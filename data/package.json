@@ -4,6 +4,6 @@
     "version": "0.0.1",
     "private": true,
     "dependencies": {
-        "node-red-contrib-tekosbot-v2": "^0.0.11"
+        "node-red-contrib-tekosbot": "^0.0.12"
     }
 }
