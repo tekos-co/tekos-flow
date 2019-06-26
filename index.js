@@ -45,6 +45,9 @@ var settings = {
                 url: "http://tekos.co"
             }
         },
+        projects: {
+           enabled: true
+        }
     },
 
 
