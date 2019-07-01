@@ -174,3 +174,13 @@ span.logo img {
 .sidebar-node-info.show-tips .node-info-tips {
     display: none !important;
 }
+
+#red-ui-header span.red-ui-header-logo{
+    margin-top: 0 !important;
+}
+#red-ui-header span.red-ui-header-logo img{
+        height: 50px;
+}
+#red-ui-header{
+    background: #fff !important
+}
