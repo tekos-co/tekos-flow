@@ -10,6 +10,7 @@ rm -rf tekos-flow
 git clone https://github.com/tekos-co/tekos-flow.git
 apt-get install python2.7    
 
+
 cd /home/ubuntu/tekos-flow
 npm i
 npm i -g pm2
