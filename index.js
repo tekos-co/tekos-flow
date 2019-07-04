@@ -18,7 +18,7 @@ var settings = {
     // httpAdminRoot: "/"+process.env.USER_TOKEN+"/red",
     httpAdminRoot: "/",
     httpNodeRoot: "/",
-    userDir: "./data",
+    userDir: "~/",
     flowFile: 'flows.json',
     editorTheme: {
         page: {
@@ -57,7 +57,7 @@ var settings = {
        default: {
            module:"localfilesystem",
            config: {
-               dir: './data'
+               dir: '~/'
 
            }
        }
