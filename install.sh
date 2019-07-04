@@ -4,7 +4,7 @@ apt update
 
 cd /home/ubuntu
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-source .bashrc 
+source /root/.bashrc 
 nvm install 12.4.0
 rm -rf tekos-flow
 git clone https://github.com/tekos-co/tekos-flow.git
