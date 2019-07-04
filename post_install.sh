@@ -7,3 +7,4 @@ echo "npm start" >> start.sh
 echo "export FLOW_LOGIN=admin" >> /root/.bashrc
 echo "export FLOW_PASSWORD=admin" >> /root/.bashrc
 source /root/.bashrc
+pm2 start /home/ubuntu/tekos-flow/start.sh --name tekos-flow
